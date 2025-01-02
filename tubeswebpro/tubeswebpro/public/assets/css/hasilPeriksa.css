@@ -1,0 +1,170 @@
+/* Kontainer Utama */
+body {
+    display: flex;
+    flex-direction: row; /* Susunan horizontal (sidebar + konten) */
+    margin: 0;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #800000 !important;
+    width: 250px;
+    height: 100vh;
+    color: white;
+    padding-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease; /* Animasi saat sidebar muncul/hilang */
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar .menu-item {
+    padding: 15px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+}
+
+.sidebar .menu-item:hover {
+    background-color: #bb0000 !important;
+}
+
+.menu-item .menu-link {
+    color: white; /* Mengubah warna teks menjadi putih */
+    text-decoration: none; /* Menghilangkan garis bawah */
+}
+
+.menu-item .menu-link:hover {
+    color: #e0e0e0; /* Warna saat di-hover */
+}
+
+/* Konten Periksa */
+.content-periksa {
+    margin-left: 165px; /* Sesuaikan dengan lebar sidebar */
+    padding: 20px;
+    width: calc(100% - 250px); /* Sisa lebar layar setelah sidebar */
+    background-color: #f8f9fa; /* Warna latar belakang */
+    min-height: 100vh; /* Tinggi penuh layar */
+    overflow-y: auto; /* Tambahkan scroll vertikal jika konten terlalu panjang */
+    box-sizing: border-box; /* Memastikan padding tidak memengaruhi lebar */
+}
+
+/* Heading */
+.content-periksa h2 {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Konten Utama */
+.content {
+    flex: 1;
+    margin-left: 250px; /* Sesuaikan dengan lebar sidebar */
+    padding: 10px;
+    background-color: #f8f9fa;
+    min-height: calc(100vh - 70px); /* 70px adalah tinggi footer */
+}
+
+/* Footer */
+footer.custom-footer {
+    background-color: #800000; /* Warna footer */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%; /* Lebar penuh */
+    height: 70px; /* Tinggi footer */
+    z-index: 1000; /* Selalu di atas konten */
+}
+
+/* Tabel */
+.table-container {
+    margin-top: auto;
+}
+
+.table {
+    background-color: #800000; /* Warna latar tabel sama dengan footer */
+    color: black; /* Teks tabel berwarna hitam */
+    border-collapse: collapse; /* Hilangkan celah antar border */
+}
+
+.table-dark th {
+    background-color: #800000; /* Header tabel sama dengan footer */
+    color: white; /* Teks header tabel putih */
+    text-align: center; /* Teks di header rata tengah */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.table-bordered td, .table-bordered th {
+    border: 1px solid black; /* Border hitam untuk pemisahan */
+    padding: 10px; /* Tambahkan jarak dalam sel */
+}
+
+.table-bordered td {
+    color: black; /* Teks di dalam tabel tetap hitam */
+    background-color: #fff; /* Latar belakang putih */
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Heading Utama */
+h1 {
+    font-family: 'Poppins', sans-serif; /* Font khusus untuk heading */
+    font-weight: 600; /* Tebal */
+    text-align: center;
+}
+
+/* Intro Section (Jika Ada) */
+#text-intro-section {
+    position: relative;
+    height: 100vh;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+/* Media Query untuk Layar Kecil */
+@media (max-width: 768px) {
+    /* Sidebar disembunyikan */
+    .sidebar {
+        width: 0;
+        overflow: hidden;
+        height: 0;
+        transition: all 0.3s ease;
+    }
+
+    /* Konten mengambil lebar penuh */
+    .content-periksa {
+        margin-left: 0; /* Hilangkan margin untuk sidebar */
+        width: 100%; /* Lebar penuh layar */
+        padding: 15px; /* Tambahkan sedikit padding */
+    }
+
+    /* Tombol untuk menampilkan Sidebar */
+    .toggle-sidebar {
+        display: block;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 1000;
+        background-color: #800000;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    /* Footer tetap di bawah */
+    footer.custom-footer {
+        position: static; /* Tetap di posisi default pada layar kecil */
+    }
+}

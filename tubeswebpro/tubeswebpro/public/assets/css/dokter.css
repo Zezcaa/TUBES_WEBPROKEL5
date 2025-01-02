@@ -1,0 +1,240 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+header.custom-header {
+    background-color: #800000; 
+    color: #fff; 
+}
+
+#text-intro-section {
+    position: relative;
+    height: 100vh;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+
+.container.h-100 {
+    height: 80%; 
+}
+
+.caption {
+    height: 100%; 
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-end; /* Align text to the right */
+    justify-content: center; 
+    padding-right: 20px; /* Add padding to the right */
+    color: #fff; 
+    text-align: right; /* Align text itself to the right */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+
+/*
+#about {
+    padding-top: 100px; 
+    padding: 20px; 
+    text-align: center; 
+    display: flex;
+}  
+
+.container.h-100 {
+    height: 100%;
+}
+
+#map {
+    border-radius: 15px;
+    overflow: hidden; 
+    height: 70vh; 
+}
+iframe {
+    width: 70%; 
+    height: 70%; 
+    border: 0; 
+}
+#content {
+    padding: 20px; 
+} */
+
+footer.custom-footer {
+    background-color: #800000; 
+    color: #fff; 
+}
+
+/*data pasien */
+
+.sidebar {
+    background-color: #800000;
+    width: 250px;
+    height: 100vh;
+    color: white;
+    padding-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.sidebar .menu-item {
+    padding: 15px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+}
+.sidebar .menu-item:hover {
+    background-color: #bb0000;
+}
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+.table-container {
+    margin-top: 20px;
+}
+
+.menu-item .menu-link {
+    color: white;       /* Mengubah warna teks menjadi putih */
+    text-decoration: none; /* Menghilangkan garis bawah */
+}
+
+.menu-item .menu-link:hover {
+    color: #e0e0e0;     /* Warna saat di-hover */
+}
+
+/*hasil pemeriksaan*/
+.content-periksa {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border:   
+1px solid #ccc;
+    border-radius: 5px;
+}
+
+.content-periksa .h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],   
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;   
+
+}
+
+.submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #3e8e41;
+}
+
+.form-group {
+    margin-bottom: 15px; /* Sesuaikan jarak antar elemen */
+  }
+  
+  .form-control {
+    border-radius: 0; /* Menghilangkan sudut membulat */
+  }
+  
+  html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#text-intro-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-footer {
+    background-color: #f8f9fa; /* Sesuaikan warna sesuai keinginan */
+}
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+    margin-left: 250px; /* Sesuaikan dengan lebar sidebar */
+    padding: 20px;
+    background-color: #f8f9fa;
+    min-height: calc(100vh - 70px); /* 70px adalah tinggi footer */
+}
+
+footer.custom-footer {
+    background-color: #800000; /* Warna footer */
+    color: #fff; /* Warna teks footer */
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #800000;
+    color: white;
+    padding-top: 20px;
+}
+
+.content {
+    margin-left: 250px; /* Sesuaikan dengan lebar sidebar */
+    padding: 20px;
+    background-color: #f8f9fa;
+    height: calc(100vh - 70px); /* Tinggi layar dikurangi tinggi footer (70px) */
+    overflow: hidden; /* Mencegah scroll */
+}
+
+footer.custom-footer {
+    background-color: #800000; /* Warna footer */
+    color: #fff; /* Warna teks footer */
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/*hasil pemeriksa*/

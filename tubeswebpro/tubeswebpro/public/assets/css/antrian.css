@@ -1,0 +1,150 @@
+#text-intro-section {
+    position: relative;
+    height: 100vh;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+/*data pasien */
+
+.sidebar {
+    background-color: #800000 !important;
+    width: 250px;
+    height: 100vh;
+    color: white;
+    padding-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease; /* Animasi saat sidebar muncul/hilang */
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.sidebar .menu-item {
+    padding: 15px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+}
+.sidebar .menu-item:hover {
+    background-color: #bb0000 !important;
+}
+
+.table-container {
+    margin-top: auto;
+}
+
+.menu-item .menu-link {
+    color: white;       /* Mengubah warna teks menjadi putih */
+    text-decoration: none; /* Menghilangkan garis bawah */
+}
+
+.menu-item .menu-link:hover {
+    color: #e0e0e0;     /* Warna saat di-hover */
+}
+
+.content {
+    flex: 1;
+    margin-left: 250px; /* Sesuaikan dengan lebar sidebar */
+    padding: 10px;
+    background-color: #f8f9fa;
+    min-height: calc(100vh - 70px); 70px adalah tinggi footer
+} 
+
+/* CSS Footer */
+footer.custom-footer {
+    background-color: #800000; /* Warna footer */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%; /* Lebar penuh */
+    height: 70px; /* Tinggi footer */
+    z-index: 1000; /* Selalu di atas konten */
+}
+
+.table {
+    background-color: #800000; /* Warna latar tabel sama dengan footer */
+    color: black; /* Teks tabel berwarna putih */
+    border-collapse: collapse; /* Hilangkan celah antar border */
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif; /* Font khusus untuk heading */
+    font-weight: 600; /* Tebal */
+    text-align: center;
+}
+
+.table-dark th {
+    background-color: #800000; /* Header tabel sama dengan footer */
+    color: white; /* Teks header tabel putih */
+    text-align: center; /* Teks di header rata tengah */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.table-bordered td, .table-bordered th {
+    border: 1px solid black; /* Border putih untuk pemisahan */
+    padding: 10px; /* Tambahkan jarak dalam sel */
+}
+
+.table-bordered td {
+    color: black; /* Teks di dalam tabel tetap putih */
+    background-color: #fff;
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+}
+
+/* CSS Responsif */
+
+/* Responsivitas */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 0; /* Sembunyikan sidebar di layar kecil */
+        overflow: hidden;
+    }
+
+    .sidebar.open {
+        width: 250px; /* Tampilkan sidebar jika dibuka */
+    }
+
+    .content {
+        margin-left: 0; /* Konten penuh jika sidebar disembunyikan */
+    }
+
+    .toggle-sidebar {
+        display: block;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 1000;
+        background-color: #800000;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+}
+
+.button-container {
+    display: flex; /* Aktifkan Flexbox */
+    justify-content:first baseline; /* Posisi tombol di tengah container */
+    align-items: center; /* Pusatkan tombol secara vertikal */
+    gap: 20px; /* Jarak antara tombol */
+    margin-top: 20px; /* Jarak dari elemen sebelumnya */
+}
+
+.button-container a, .button-container button {
+    padding: 10px 20px; /* Ukuran tombol */
+    font-size: 16px; /* Ukuran teks */
+    cursor: pointer; /* Ubah kursor saat hover */
+    text-align: center; /* Pastikan teks di tombol rata tengah */
+    min-width: 120px; /* Lebar minimum tombol */
+}
+
+
